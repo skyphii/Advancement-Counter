@@ -6,8 +6,6 @@ import java.util.Comparator;
 import org.bukkit.entity.Player;
 
 public class Participant {
-    
-    private static ArrayList<Participant> participants;
 
     private Player player;
     private int count;
@@ -43,6 +41,8 @@ public class Participant {
 
     // static methods //
 
+    private static ArrayList<Participant> participants = new ArrayList<Participant>();
+
     private static void add(Participant participant) {
         participants.add(participant);
     }
@@ -68,7 +68,7 @@ public class Participant {
                 participant.resetListName();
             }
         }
-        participants = new ArrayList<Participant>();
+        participants.clear();
     }
 
     
